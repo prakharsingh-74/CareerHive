@@ -4,6 +4,13 @@ import cors from "cors";
 
 const app = express();
 
+app.get("/home",(req, res)=>{
+    return res.status(200).json({
+        message:"I am coming from backend",
+        success:true
+    })
+})
+
 //middleware
 app.use(express.json())
 app.use(express.urlencoded({extended:true}));
