@@ -26,7 +26,7 @@ const userSchema = new mongoose.Schema({
     profile:{
         bio:{type:String},
         skills:{type:String},
-        resume:{type:string}, //URL
+        resume:{type:String}, //URL
         resumeOriginalName:{type:String},
         company:{type: mongoose.Schema.Types.ObjectId, ref:"company"},
         profilePhoto:{
