@@ -27,7 +27,7 @@ export const register = async (req, res) => {
             role,
         });
         return res.status(201).json({
-            message: "User created successfully.",
+            message: "Account created successfully.",
             success: true
         });
     } catch (error) {
