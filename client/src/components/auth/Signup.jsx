@@ -2,7 +2,9 @@ import React from 'react'
 import Navbar from '../shared/Navbar'
 import { Label } from '@radix-ui/react-label'
 import { Input } from '../ui/input'
-import { RadioGroup, RadioGroupItem } from '../ui/radio-group'
+import { RadioGroup } from '../ui/radio-group'
+import { Button } from '../ui/button'
+import { Link } from 'react-router-dom'
 
 const Signup = () => {
   return (
@@ -50,7 +52,7 @@ const Signup = () => {
                   type="radio"
                   name="role"
                   value="student"
-                  
+
                   className="cursor-pointer"
                 />
                 <Label htmlFor="r1">Student</Label>
@@ -60,17 +62,26 @@ const Signup = () => {
                   type="radio"
                   name="role"
                   value="recruiter"
-                  
                   className="cursor-pointer"
                 />
                 <Label htmlFor="r1">Recruiter</Label>
               </div>
             </RadioGroup>
+            <div className='flex items-center gap-2'>
+              <Label>Profile</Label>
+              <Input
+                accept="image/*"
+                type="file"
+                className="cursor-pointer"
+              />
+            </div>
           </div>
+          <Button variant="outline" type="submit" className="w-full my-10">Signup</Button>
+          <span className='flex items-center justify-center text-sm'>Already have an account? <Link to="/login" className='text-blue-600'>Login</Link></span>
         </form>
       </div>
     </div>
   )
 }
 
-export default Signup
+export default Signup;
