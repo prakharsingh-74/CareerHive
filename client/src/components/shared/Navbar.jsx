@@ -14,7 +14,7 @@ const Navbar = () => {
                     <h1 className='text-2xl font-bold'>Career<span className='text-[#F83002]'>hive</span></h1>
                 </div>
 
-                <div className='flex items-center gap-2'>
+                <div className='flex items-center gap-10'>
                     <ul className='flex font-medium items-center gap-5'>
                         <li>Home</li>
                         <li>Jobs</li>

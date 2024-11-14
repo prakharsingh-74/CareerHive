@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../shared/Navbar'
 import { Label } from '@radix-ui/react-label'
 import { Input } from '../ui/input'
+import { RadioGroup, RadioGroupItem } from '../ui/radio-group'
 
 const Signup = () => {
   return (
@@ -40,6 +41,31 @@ const Signup = () => {
               type="text"
               placeholder="Password"
             />
+          </div>
+
+          <div className='flex items-center justify-between'>
+            <RadioGroup className='flex items-center justify-between'>
+              <div className="flex items-center space-x-2">
+                <Input
+                  type="radio"
+                  name="role"
+                  value="student"
+                  
+                  className="cursor-pointer"
+                />
+                <Label htmlFor="r1">Student</Label>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Input
+                  type="radio"
+                  name="role"
+                  value="recruiter"
+                  
+                  className="cursor-pointer"
+                />
+                <Label htmlFor="r1">Recruiter</Label>
+              </div>
+            </RadioGroup>
           </div>
         </form>
       </div>
